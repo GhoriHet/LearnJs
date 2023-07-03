@@ -8,10 +8,11 @@ document.getElementById("demo1").innerHTML = y
 let ans = x + y;
 
 function validateCaptcha() {
+    // console.log("aaaa");
     if (document.getElementById("cpatchaTextBox").value == ans) {
         alert("Correct Answer")
     } else {
-        console.log('validateCaptcha', ans);
+        // console.log('validateCaptcha', ans);
         alert("Invalid Answer. Correct Answer is : " + ans);
     }
     window.location.reload();
