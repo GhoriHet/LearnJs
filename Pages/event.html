@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event JavaScript!</title>
+</head>
+<body>
+    <!-- --------------------Mouse Event-------------------- -->
+    <h1 onclick="handleClick()">Hello!</h1>
+    <br><br>
+    <input type="text" id="mouse_over" name="mouse_over" placeholder="mouse_over" onmouseover="handleMouseover()">
+    <br><br>
+    <input type="text" id="mouse_out" name="mouse_out" placeholder="mouse_out" onmouseout="handleMouseout()">
+    <br><br>
+    <input type="text" id="mouse_down" name="mouse_down" placeholder="mouse_down" onmousedown="handleMousedown()">
+    <br><br>
+    <input type="text" id="mouse_up" name="mouse_up" placeholder="mouse_up" onmouseup="handleMouseUp()">
+    <br><br>
+    <input type="text" id="mouse_move" name="mouse_move" placeholder="mouse_move" onmousemove="handleMousemove()">
+    <br><br>
+    <!-- ---------------------------------------------------- -->
+
+
+    <!-- -------------------- KeyBoard Event-------------------- -->
+
+    <input type="text" id="key_up" name="key_up" placeholder="key_up" onkeyup="handlekeyup()">
+    <br><br>
+    <input type="text" id="key_down" name="key_down" placeholder="key_down" onkeydown="handlekeydown()">
+    <br><br>
+
+    <!-- ------------------------------------------------------- -->
+
+    <!-- ---------------------- Form Event---------------------- -->
+    <input type="text" id="focus" name="focus" placeholder="focus" onfocus="handleFocus()" onblur="handleblur()">
+    <br><br>
+    <input type="text" id="submit" name="submit" placeholder="submit" onsubmit="handlesubmit()">
+    <br><br>
+    <select name="country" id="country" onchange="handlechange()">
+        <option value="0">--Select--</option>
+        <option value="ca">Canada</option>
+        <option value="uk">England</option>
+    </select>
+
+     <!-- ------------------------------------------------------- -->
+
+    <script src="../Asset/JS/event.js"></script>
+</body>
+</html>
