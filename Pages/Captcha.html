@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(./Image/nice-landscape-with-boat.jpg);
+            background-position: center;
+            background-size: cover;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .block {
+            width: 550px;
+            height: 250px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        #container {
+            position: absolute;
+            left: 25px;
+            top: 75px;
+            width: 500px;
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 10px;
+            box-shadow: 2px 2px 12px rgba(0 0 0 /0.4);
+        }
+
+        #demo, #demo1 {
+            display: inline-block;
+            width: 70px;
+            height: 60px;
+            margin: 20px;
+            font-size: 41px;
+            text-align: center;
+            line-height: 64px;
+        }
+
+        #icon {
+            display: inline-block;
+            margin-top: 34px;
+            color: #000;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #equal {
+            display: inline-block;
+            margin-top: 34px;
+            color: #000;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #cpatchaTextBox {
+            width: 120px;
+            height: 30px;
+            display: inline-block;
+            padding: 10px;
+            margin: 35px 20px;
+        }
+
+        #cpatchaTextBox::placeholder {
+            color: #000;
+        }
+
+        button {
+            width: 86px;
+            height: 38px;
+            margin: 20px 200px;
+            font-weight: 600;
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <form onsubmit="validateCaptcha()">
+            <div id="container">
+                <p id="demo"></p>
+                <p id="icon"><i class="fa-solid fa-plus"></i></p>
+                <p id="demo1"></p>
+                <p id="equal"><i class="fa-solid fa-equals"></i></p>
+                <p id="total"></p>
+
+                <div id="captcha">
+                </div>
+                <input type="text" placeholder="Answer" id="cpatchaTextBox" />
+                <button id="submit" type="submit">Submit</button>
+
+            </div>
+        </form>
+    </div>
+
+    <script src="Js/Captcha.js"></script>
+</body>
+
+</html>

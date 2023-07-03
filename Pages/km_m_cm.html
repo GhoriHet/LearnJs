@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM M CM</title>
+    <link rel="stylesheet" href="./CSS/km_m_cm.css">
+</head>
+<body>
+    <div id="process">
+    <form action="" onsubmit="return handleSubmit()">
+       <h2>Conversion Calculator</h2>
+      <label for="#">-- Select --</label>
+        <select name="duration" id="duration">
+            <option value="0">--Select--</option>
+            <option value="km">km</option>
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+        </select> <br><br>
+        <label for="#">Enter a Value</label>
+        <input type="text" name="value" id="value" placeholder="Please enter value: "> <br><br>
+        <label for="#">Convert Select</label>
+        <select name="convert" id="convert">
+            <option value="0">--Select--</option>
+            <option value="km">km</option>
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+        </select><br><br>
+
+        <input type="submit" value="Conveter">
+   
+    </form>
+
+    <p>Result Is: <span id="total_ans"></span></p>
+</div>
+    <script src="JS/km_m_cm.js"></script>
+</body>
+</html>
