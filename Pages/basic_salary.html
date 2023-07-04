@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Salary!</title>
+    <link rel="stylesheet" href="../Asset/CSS/basic_salary.css">
+</head>
+
+<body>
+    <form action="" id="basicForm" onsubmit="return handleCalculate()">
+        <h2>Basic Salary Calculator</h2>
+        <input type="text" name="basic_salary" id="basic_salary" placeholder="Please enter your basic salary"> <br><br>
+
+        <select name="gender" id="gender">
+            <option value="0">--Select--</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+        </select> <br><br>
+
+        <select name="experience" id="experience">
+            <option value="0">--Experience--</option>
+            <option value="month">Monthly</option>
+            <option value="year">Yearly</option>
+        </select> <br><br>
+
+        <input type="text" id="expgred" placeholder="Enter experience year."> <br><br>
+
+        <input type="submit">
+
+        <p>Your Basic Salary: <span id="basicsalary"></span></p>
+        <p>Your Bonus: <span id="bonus"></span></p>
+        <p>Your Final Salary: <span id="fn_sal"></span></p>
+    </form>
+
+    <script src="../Asset/JS/basic_salary.js"></script>
+</body>
+
+</html>
