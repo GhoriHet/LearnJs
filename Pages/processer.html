@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return calculateCost()">
+        <label for="Processor-Detail">Processor</label> <br><br>
+        <input type="radio" name="Processor-1" id="processor-1">
+        <span id="i3">i3</span>
+
+        <input type="radio" name="Processor-2" id="processor-2">
+        <span id="i5">i5</span>
+
+        <input type="radio" name="Processor-3" id="processor-3">
+        <span id="i7">i7</span>
+        <br><br>
+
+        <label for="Ram-Detail">RAM</label> <br><br>
+        <input type="radio" name="ram-1" id="ram-1">
+        <span id="4gb">4GB</span>
+
+        <input type="radio" name="ram-2" id="ram-2">
+        <span id="8gb">8GB</span>
+
+        <input type="radio" name="ram-3" id="ram-3">
+        <span id="12gb">12GB</span>
+        <br><br>
+
+        <label for="Memory-Detail">MEMORY</label> <br><br>
+        <input type="radio" name="memory-1" id="memory-1">
+        <span id="256">256GB</span>
+
+        <input type="radio" name="memory-2" id="memory-2">
+        <span id="512">512GB</span>
+
+        <input type="radio" name="memory-3" id="memory-3">
+        <span id="1TB">1TB</span>
+        <br><br>
+
+        <label for="Graphics-Card-Detail">Graphic Card</label>
+        <input type="radio" name="yes1" id="yes1" value="y">
+        <span id="yes">Yes</span>
+
+        <input type="radio" name="no1" id="no1">
+        <span id="no">No</span>
+        <br><br>
+
+        <button type="submit" onclick="pcType()">Calculate Cost</button>
+
+    </form>
+    <script src="../Asset/JS/processer.js"></script>
+</body>
+
+</html>
