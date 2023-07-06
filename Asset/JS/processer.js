@@ -15,7 +15,7 @@
 // }
 
 
-// let total = 0;
+let total = 0;
 const CalculateCost = () => {
     // console.log("aaaaaa");
     let pro = document.getElementById("Processer").value;
@@ -28,23 +28,22 @@ const CalculateCost = () => {
     if (pro === 'i3') {
     } else if (ram === '4GB') {
     } else if (memory === '256GB') {
-    } else if (gpcard === 'yes') {
+    } else if (gpcard === 'yes' || gpcard === 'no') {
     }
-    total = 7000 + 3000 + 2500 + 4500;
 
     if (pro === 'i5') {
     } else if (ram === '8GB') {
     } else if (memory === '512GB') {
-    } else if (gpcard === 'yes') {
+    } else if (gpcard === 'yes' || gpcard === 'no') {
     }
-    total = 12000 + 6000 + 5000 + 4500;
 
     if (pro === 'i7') {
     } else if (ram === '12GB') {
     } else if (memory === '1TB') {
-    } else if (gpcard === 'yes') {
+    } else if (gpcard === 'yes' || gpcard === 'no') {
     }
-    total = 18000 + 9000 + 10000 + 4500;
+
+    total = pro + ram + memory + gpcard;
 
     console.log(total);
 
