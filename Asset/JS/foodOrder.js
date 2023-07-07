@@ -54,22 +54,11 @@ const handleSubmit = () => {
     }
 
     let total = foodVal + friVal + pepsiVal;
-    let less;
-
-    if (codes === 'MNP987') {
-        less = total * 0.10;
-    } else {
-        less = 0;
-    }
-
-    let total1 = foodVal + friVal + pepsiVal - less;
 
     document.getElementById("out1").innerHTML = foodVal;
     document.getElementById("out2").innerHTML = friVal;
     document.getElementById("out3").innerHTML = pepsiVal;
     document.getElementById("out4").innerHTML = total;
-    document.getElementById("out5").innerHTML = less;
-    document.getElementById("out6").innerHTML = total1;
 
     return false;
 }
