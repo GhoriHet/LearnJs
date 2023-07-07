@@ -1,3 +1,13 @@
+const BillType = (foodVal, friVal, pepsiVal, total, coup, total1) => {
+
+    document.getElementById("out1").innerHTML = foodVal;
+    document.getElementById("out2").innerHTML = friVal;
+    document.getElementById("out3").innerHTML = pepsiVal;
+    document.getElementById("out4").innerHTML = total;
+    document.getElementById("out5").innerHTML = coup;
+    document.getElementById("out6").innerHTML = total1;
+}
+
 const handleSubmit = () => {
     let fries = document.getElementById("frieee").value;
     let drink = document.getElementById("colddrink").value;
@@ -6,7 +16,6 @@ const handleSubmit = () => {
     let fri = document.getElementsByName("fries");
     let coldd = document.getElementsByName("drink");
     let pepsi = document.getElementsByName("pepsi");
-    console.log(fries, drink, codes, food, fri, coldd, pepsi);
 
     let foodVal = 0;
     let friVal = 0;
@@ -18,7 +27,6 @@ const handleSubmit = () => {
             foodVal = parseInt(food[i].value);
         }
     }
-    console.log(foodVal);
 
     for (let i = 0; i < fri.length; i++) {
         if (fri[i].checked) {
@@ -38,7 +46,6 @@ const handleSubmit = () => {
                 colddVal = 0;
             }
         }
-
     }
 
     for (let i = 0; i < pepsi.length; i++) {
@@ -54,11 +61,17 @@ const handleSubmit = () => {
     }
 
     let total = foodVal + friVal + pepsiVal;
+    let coup;
+    if (codes === 'ABC123') {
+        coup = total * 0.10
+    } else if (codes === 'XYX856') {
+        coup = total * 0.10
+    } else if (codes === 'MNP987') {
+        coup = total * 0.10
+    }
+    let total1 = (foodVal + friVal + pepsiVal - coup)
 
-    document.getElementById("out1").innerHTML = foodVal;
-    document.getElementById("out2").innerHTML = friVal;
-    document.getElementById("out3").innerHTML = pepsiVal;
-    document.getElementById("out4").innerHTML = total;
+    BillType(foodVal, friVal, pepsiVal, total, coup, total1);
 
     return false;
 }
