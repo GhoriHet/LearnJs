@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Order</title>
+    <style>
+        /* Add some basic styling here */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Food Order Form</h1>
+
+    <form action="" onsubmit="return handleSubmit()">
+
+        <span>Food: </span>
+        <input type="radio" name="food" value="80">Burger
+        <input type="radio" name="food" value="210">Pizza
+        <input type="radio" name="food" value="160">SandWhich
+        <input type="radio" name="food" value="320">Combo
+        <br><br>
+
+        <span>Quantity: </span>
+        <input type="radio" name="quanity" value="50">1
+        <input type="radio" name="quanity" value="50">2
+        <input type="radio" name="quanity" value="50">3
+        <br><br>
+
+        <label for="Fries">Fries:</label>
+        <input type="radio" name="fries" value="50"> Yes
+        <input type="radio" name="fries" value="0"> No
+        <br>
+
+        <label for="Colddrink">Cold Drinks:</label>
+        <input type="radio" name="yyy"> Yes
+        <input type="radio" name="yyy"> No
+        <br>
+        <input type="radio" name="cold" value="50">Pepsi
+        <input type="radio" name="cold" value="80">Thick Shake
+        <input type="radio" name="cold" value="70">Cold Coco
+        <br><br>
+
+        Coupon Code: <input type="text" name="Coupon_Code" id="cpncode" placeholder="Coupon Code">
+        <br><br>
+        <input type="submit" value="Order Food">
+        <br><br>
+        <p>Total Price <span id="food_total"></span></p>
+    </form>
+
+
+
+    <script src="../Asset/JS/foodOrder.js"></script>
+</body>
+
+</html>
