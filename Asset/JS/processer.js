@@ -1,60 +1,60 @@
-// let pro = document.getElementById("Processor");
-// let ram = document.getElementById("ram");
-// let memory = document.getElementById("memory");
-// let gpcard = document.getElementById("gpcard")
-// let total;
+const PCType = (proVal, ramVal, memoryVal, graphicVal) => {
+    // console.log(proVal, ramVal, memoryVal, graphicVal);
 
-// const CalculateCost = (pro) => {
-
-//     if (pro === 'i3') {
-//         total =  5000;
-//     }
-//     console.log(total);
-
-//     return false;
-// }
-
-
-let total = 0;
-const CalculateCost = () => {
-    // console.log("aaaaaa");
-    let pro = document.getElementById("Processer").value;
-    let ram = document.getElementById("ram").value;
-    let memory = document.getElementById("memory").value;
-    let gpcard = document.getElementById("graphics").value;
-
-    console.log(pro, ram, memory, gpcard);
-
-    if (pro === 'i3') {
-    } else if (ram === '4GB') {
-    } else if (memory === '256GB') {
-    } else if (gpcard === 'yes' || gpcard === 'no') {
+    if (proVal === 7000) {
+        return 'Student PC';
+    } else if (proVal === 12000 && ramVal >= 6000 && memoryVal >= 5000) {
+        return 'Professional PC';
+    } else if (proVal === 18000 && ramVal >= 6000 && memoryVal >= 5000 && graphicVal === 4500) {
+        return 'Gaming PC';
+    } else {
+        return 'Daily Uses PC';
     }
 
-    if (pro === 'i5') {
-    } else if (ram === '8GB') {
-    } else if (memory === '512GB') {
-    } else if (gpcard === 'yes' || gpcard === 'no') {
+}
+
+const handleSubmit = () => {
+    let pro = document.getElementsByName("pro");
+    let ram = document.getElementsByName("ram");
+    let memory = document.getElementsByName("memory");
+    let graphics = document.getElementsByName("graphics");
+
+    console.log(pro);
+    let proVal = 0;
+    let ramVal = 0;
+    let memoryVal = 0;
+    let graphicVal = 0;
+
+    for (let i=0; i<pro.length; i++) {
+        if (pro[i].checked) {
+            proVal = parseInt(pro[i].value);
+        }
     }
 
-    if (pro === 'i7') {
-    } else if (ram === '12GB') {
-    } else if (memory === '1TB') {
-    } else if (gpcard === 'yes' || gpcard === 'no') {
+    for (let i=0; i<ram.length; i++) {
+        if (ram[i].checked) {
+            ramVal = parseInt(ram[i].value);
+        }
     }
 
-    total = pro + ram + memory + gpcard;
+    for (let i=0; i<memory.length; i++) {
+        if (memory[i].checked) {
+            memoryVal = parseInt(memory[i].value);
+        }
+    }
 
-    console.log(total);
+    for (let i=0; i<graphics.length; i++) {
+        if (graphics[i].checked) {
+            graphicVal = parseInt(graphics[i].value);
+        }
+    }
+
+    let type = PCType(proVal, ramVal, memoryVal, graphicVal);
+
+    let costing = proVal + ramVal + memoryVal + graphicVal;
+
+    document.getElementById("cost").innerHTML = costing;
+    document.getElementById("pc_types").innerHTML = type;
 
     return false;
 }
-
-const pcType = () => {
-
-
-
-
-}
-
-pcType();

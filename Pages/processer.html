@@ -8,50 +8,35 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="title">Computer Configuration</div>
-    <br><br>
-    <div class="content">
-      <form action="" onsubmit="return CalculateCost()">
-
-
-        <span>Processer</span>
-        <select name="Processer" id="Processer">
-          <option value="0">--Select Processer--</option>
-          <option value="7000">i3</option>
-          <option value="12000">i5</option>
-          <option value="18000">i7</option>
-        </select> <br><br>
+    <form action=""  onsubmit="return handleSubmit()">
+        <span>Processor</span>
+        <input type="radio" name="pro" value="7000">i3
+        <input type="radio" name="pro" value="12000">i5
+        <input type="radio" name="pro" value="18000">i7
+        <br><br>
 
         <span>RAM</span>
-        <select name="ram" id="ram">
-          <option value="0">--Select RAM--</option>
-          <option value="3000">4GB</option>
-          <option value="6000">8GB</option>
-          <option value="9000">12GB</option>
-        </select> <br><br>
+        <input type="radio" name="ram" value="3000">4GB
+        <input type="radio" name="ram" value="6000">8GB
+        <input type="radio" name="ram" value="9000">12GB
+        <br><br>
 
-        <span>Memory</span>
-        <select name="memory" id="memory">
-          <option value="0">--Select Memory--</option>
-          <option value="2500">256GB</option>
-          <option value="5000">512GB</option>
-          <option value="10000">1TB</option>
-        </select><br><br>
+        <span>MEMORY</span>
+        <input type="radio" name="memory" value="2500">256GB
+        <input type="radio" name="memory" value="5000">512GB
+        <input type="radio" name="memory" value="10000">1TB
+        <br><br>
 
-        <span>Graphics card</span>
-        <select name="graphics" id="graphics">
-          <option value="0">--Select Graphics Card</option>
-          <option value="4500">Yes</option>
-          <option value="0">No</option>
-        </select><br><br>
+        <span>Graphics Card</span>
+        <input type="radio" name="graphics" value="4500">Yes
+        <input type="radio" name="graphics" value="0">No
+        <br><br>
 
-        <div id="button">
-          <input type="submit" value="Calculate Cost">
-        </div> <br><br>
-      </form>
-    </div>
-  </div>
+        <input type="submit" valuxe="Calculate Cost">
+    </form>
+
+    <p>Costing: <span id="cost"></span></p>
+    <p>PC Type: <span id="pc_types"></span></p>
 
 
   <script src="../Asset/JS/processer.js"></script>
