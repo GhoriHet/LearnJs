@@ -1,12 +1,12 @@
 const handleSubmit = () => {
-
-    let food = document.getElementsByName("food");
-    let fri = document.getElementsByName("fries");
     let fries = document.getElementById("frieee").value;
-    let coldd = document.getElementsByName("drink");
-    let pepsi = document.getElementsByName("pepsi");
     let drink = document.getElementById("colddrink").value;
     let codes = document.getElementById("coupon").value;
+    let food = document.getElementsByName("food");
+    let fri = document.getElementsByName("fries");
+    let coldd = document.getElementsByName("drink");
+    let pepsi = document.getElementsByName("pepsi");
+    console.log(fries, drink, codes, food, fri, coldd, pepsi);
 
     let foodVal = 0;
     let friVal = 0;
@@ -18,6 +18,7 @@ const handleSubmit = () => {
             foodVal = parseInt(food[i].value);
         }
     }
+    console.log(foodVal);
 
     for (let i = 0; i < fri.length; i++) {
         if (fri[i].checked) {
