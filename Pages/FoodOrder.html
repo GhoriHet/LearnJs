@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="" onsubmit="return handleSubmit()">
+
+        <span>Product:</span>
+        <input type="radio" name="food" value="80">Burger
+        <input type="radio" name="food" value="210">Pizza
+        <input type="radio" name="food" value="160">Sandwich
+        <input type="radio" name="food" value="320">Combo
+        <br><br>
+
+
+        <span>Fries:</span>
+        <input type="radio" name="fries" value="100">Yes
+        <input type="radio" name="fries" value="0">No
+        <br><br>
+
+        <select name="" id="frieee">
+            <option value="0">--Select--</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br><br>
+
+        <span>Cold Drinks:</span>
+        <input type="radio" name="drink" value="1">Yes
+        <input type="radio" name="drink" value="0">No
+        <br><br>
+
+        <span>Select:</span>
+        <input type="radio" name="pepsi" value="50">Pepsi
+        <input type="radio" name="pepsi" value="80">Thick Shake
+        <input type="radio" name="pepsi" value="70">Cold Coco
+        <br><br>
+
+        <select name="" id="colddrink">
+            <option value="0">--Select--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br><br>
+
+        <span>Coupon Code:</span>
+        <input type="text" id="coupon">
+        <br><br>
+
+        <input type="submit" value="Order Food">
+        <br><br>
+        <span>Food <span id="out1"></span></span>
+        <br><br>
+
+        <span>Fri <span id="out2"></span></span>
+        <br><br>
+
+        <span>Cold  <span id="out3"></span></span>
+        <br><br>
+
+        <span>Total Bill <span id="out4"></span></span>
+        <br><br>
+
+        <span>Coupon <span id="out5"></span></span>
+        <br><br>
+
+        <span>Pay Bill <span id="out6"></span></span>
+        <br><br>        
+    </form>
+
+    <script src="../Asset/JS/foodOrder.js"></script>
+</body>
+
+</html>
