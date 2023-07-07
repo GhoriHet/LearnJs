@@ -1,16 +1,17 @@
 const handleSubmit = () => {
+
     let food = document.getElementsByName("food");
-    let fries = document.getElementsByName("fries");
-    let colddri = document.getElementsByName("cold");
-    let coupon = document.getElementsByName("Coupon_Code");
-    let quanity = document.getElementsByName("quanity");
-    // console.log(food);
+    let fri = document.getElementsByName("fries");
+    let fries = document.getElementById("frieee").value;
+    let coldd = document.getElementsByName("drink");
+    let pepsi = document.getElementsByName("pepsi");
+    let drink = document.getElementById("colddrink").value;
+    let codes = document.getElementById("coupon").value;
 
     let foodVal = 0;
-    let friesVal = 0;
-    let colddriVal = 0;
-    let couponVal = 0;
-    let quanityVal = 0;
+    let friVal = 0;
+    let colddVal = 0;
+    let pepsiVal = 0;
 
     for (let i = 0; i < food.length; i++) {
         if (food[i].checked) {
@@ -18,37 +19,56 @@ const handleSubmit = () => {
         }
     }
 
-    for (let i = 0; i <= quanity.length; i++) {
-        if (quanity[i].checked) {
-            quanityVal = parseInt(quanity[i].value);
-        }
-    }
-    console.log(quanityVal);
-    
-    for (let i = 0; i < fries.length; i++) {
-        if (fries[i].checked) {
-            friesVal = parseInt(fries[i].value);
+    for (let i = 0; i < fri.length; i++) {
+        if (fri[i].checked) {
+            if (fri[i].value === '100') {
+                friVal = fries * parseInt((fri[i].value));
+            } else if (fri[i].value === '0') {
+                friVal = 0;
+            }
         }
     }
 
-    for (let i = 0; i < colddri.length; i++) {
-        if (colddri[i].checked) {
-            colddriVal = parseInt(colddri[i].value);
+    for (let i = 0; i < coldd.length; i++) {
+        if (coldd[i].checked) {
+            if (coldd[i].value === '1') {
+                colddVal = parseInt(coldd[i].value);
+            } else if (coldd[i].value === '0') {
+                colddVal = 0;
+            }
+        }
+
+    }
+
+    for (let i = 0; i < pepsi.length; i++) {
+        if (pepsi[i].checked) {
+            if (pepsi[i].value === '50' ) {
+                pepsiVal = colddVal * drink * parseInt(pepsi[i].value);
+            } else if (pepsi[i].value === '80') {
+                pepsiVal = colddVal * drink * parseInt(pepsi[i].value);
+            } else if (pepsi[i].value === '70') {
+                pepsiVal = colddVal * drink * parseInt(pepsi[i].value);
+            }
         }
     }
 
-    for (let i = 0; i < coupon.length; i++) {
-        if (coupon[i].checked) {
-            couponVal = parseInt(coupon[i].value);
-        }
+    let total = foodVal + friVal + pepsiVal;
+    let less;
+
+    if (codes === 'MNP987') {
+        less = total * 0.10;
+    } else {
+        less = 0;
     }
 
-    // console.log(foodVal, friesVal, colddriVal, couponVal);
+    let total1 = foodVal + friVal + pepsiVal - less;
 
-    let total = foodVal + friesVal + colddriVal + couponVal + quanityVal;
-    // console.log(total);
-
-    document.getElementById("food_total").innerHTML = total;
+    document.getElementById("out1").innerHTML = foodVal;
+    document.getElementById("out2").innerHTML = friVal;
+    document.getElementById("out3").innerHTML = pepsiVal;
+    document.getElementById("out4").innerHTML = total;
+    document.getElementById("out5").innerHTML = less;
+    document.getElementById("out6").innerHTML = total1;
 
     return false;
 }
