@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Asset/CSS/pc_config.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Computer Costing</div>
+    <div class="content">
+      <form action="#" onsubmit="return CalculateCost()">
+        <br>
+        <div class="category">
+          <div class="pro">
+            <label for="">processer</label>
+            <select name="processer" id="processer">
+              <option value="0">--select--</option>
+              <option value="7000">i3</option>
+              <option value="12000">i5</option>
+              <option value="18000">i7</option>
+            </select>
+          </div>
+          <br>
+          <div class="ramm">
+            <label for="">ram</label>
+            <select name="ram" id="ram">
+              <option value="0">--select--</option>
+              <option value="3000">4gb</option>
+              <option value="6000">8gb</option>
+              <option value="9000">12gb</option>
+            </select>
+          </div>
+          <br>
+          <div class="mem">
+            <label for="">memory</label>
+            <select name="memory" id="memory">
+              <option value="0">--select--</option>
+              <option value="2500">256gb</option>
+              <option value="5000">512gb</option>
+              <option value="10000">1tb</option>
+            </select>
+          </div>
+          <br>
+          <div class="Grap">
+            <label for="">graphics</label>
+            <select name="graphics" id="graphics">
+              <option value="0">--select--</option>
+              <option value="4500">yes</option>
+              <option value="0">no</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="last">
+          Total Cost: <p id="totalVal"></p>
+        <br>
+        Type of Computer: <p id="typeof"></p>
+        <br>
+        </div>
+        
+        <div class="button">
+          <input type="submit" value="Calculate Cost">
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+  <script src="../Asset/JS/pc_config.js"></script>
+</body>
+
+</html>
