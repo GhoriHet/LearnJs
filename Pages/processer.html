@@ -5,39 +5,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Computer Configuration</title>
+  <link rel="stylesheet" href="../Asset/CSS/processer.css">
 </head>
 
 <body>
-    <form action=""  onsubmit="return handleSubmit()">
-        <span>Processor</span>
-        <input type="radio" name="pro" value="7000">i3
-        <input type="radio" name="pro" value="12000">i5
-        <input type="radio" name="pro" value="18000">i7
-        <br><br>
+  <div class="container">
+    <div class="title">Computer Costing</div>
+    <div class="content">
+    <form action="" onsubmit="return handleSubmit()" id="">
+      <div class="pro">
+      <span>Processor</span>
+      <input type="radio" name="pro" value="7000">i3
+      <input type="radio" name="pro" value="12000">i5
+      <input type="radio" name="pro" value="18000">i7
+      <br><br>
+    </div>
+      <div class="ramm">
+      <span>RAM</span>
+      <input type="radio" name="ram" value="3000">4GB
+      <input type="radio" name="ram" value="6000">8GB
+      <input type="radio" name="ram" value="9000">12GB
+      <br><br>
+      </div>
 
-        <span>RAM</span>
-        <input type="radio" name="ram" value="3000">4GB
-        <input type="radio" name="ram" value="6000">8GB
-        <input type="radio" name="ram" value="9000">12GB
-        <br><br>
-
+      <div class="mem">
         <span>MEMORY</span>
         <input type="radio" name="memory" value="2500">256GB
         <input type="radio" name="memory" value="5000">512GB
         <input type="radio" name="memory" value="10000">1TB
         <br><br>
+      </div>
 
+      <div class="Grap">
         <span>Graphics Card</span>
         <input type="radio" name="graphics" value="4500">Yes
         <input type="radio" name="graphics" value="0">No
         <br><br>
+      </div>
 
-        <input type="submit" valuxe="Calculate Cost">
+      <div class="button">
+        <input type="submit" value="Calculate Cost">
+      </div>
     </form>
-
-    <p>Costing: <span id="cost"></span></p>
-    <p>PC Type: <span id="pc_types"></span></p>
-
+    <div class="last">
+      <p>Costing: <span id="cost"></span></p>
+      <p>PC Type: <span id="pc_types"></span></p>
+    </div>
+  </div>
+  </div>
 
   <script src="../Asset/JS/processer.js"></script>
 </body>

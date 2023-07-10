@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Order</title>
+    <link rel="stylesheet" href="../Asset/CSS/foodOrder.css">
 </head>
+
 <body>
+    <h1>Food Order System</h1>
     <form action="" onsubmit="return handleSubmit()">
 
         <span>Product:</span>
@@ -22,7 +26,7 @@
         <br><br>
 
         <select name="" id="frieee">
-            <option value="0">--Select Number--</option>
+            <option value="0">--Select--</option>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -42,7 +46,7 @@
         <br><br>
 
         <select name="" id="colddrink">
-            <option value="0">--Select Number--</option>
+            <option value="0">--Select--</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -54,24 +58,30 @@
         <br><br>
 
         <input type="submit" value="Order Food">
+        <br><br>
 
-        <span>F</span>
-        <span id="out1"></span>
-        <br>
+        <div class="payments">
+        <span>Food: <span id="out1"></span></span>
+        <br><br>
 
-        <span>Fri</span>
-        <span id="out2"></span>
-        <br>
+        <span>Fries: <span id="out2"></span></span>
+        <br><br>
 
-        <span>Cold</span>
-        <span id="out3"> </span>
-        <br>
-        
-        <span>Total Bill</span>
-        <span id="out4"></span>
-        <br>
+        <span>Cold: <span id="out3"></span></span>
+        <br><br>
+
+        <span>Total Bill: <span id="out4"></span></span>
+        <br><br>
+
+        <span>Coupon: <span id="out5"></span></span>
+        <br><br>
+
+        <span>Pay Bill: <span id="out6"></span></span>
+        <br><br>        
+    </div>
     </form>
-    
+
     <script src="../Asset/JS/foodOrder.js"></script>
 </body>
+
 </html>

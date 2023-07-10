@@ -50,11 +50,7 @@ const handleSubmit = () => {
 
     for (let i = 0; i < pepsi.length; i++) {
         if (pepsi[i].checked) {
-            if (pepsi[i].value === '50' ) {
-                pepsiVal = colddVal * drink * parseInt(pepsi[i].value);
-            } else if (pepsi[i].value === '80') {
-                pepsiVal = colddVal * drink * parseInt(pepsi[i].value);
-            } else if (pepsi[i].value === '70') {
+            if (pepsi[i].value === '50' || pepsi[i].value === '80' || pepsi[i].value === '70') {
                 pepsiVal = colddVal * drink * parseInt(pepsi[i].value);
             }
         }
@@ -62,11 +58,7 @@ const handleSubmit = () => {
 
     let total = foodVal + friVal + pepsiVal;
     let coup;
-    if (codes === 'ABC123') {
-        coup = total * 0.10
-    } else if (codes === 'XYX856') {
-        coup = total * 0.10
-    } else if (codes === 'MNP987') {
+    if (codes === 'ABC123' || codes === 'XYX856' || codes === 'MNP987') {
         coup = total * 0.10
     }
     let total1 = (foodVal + friVal + pepsiVal - coup)

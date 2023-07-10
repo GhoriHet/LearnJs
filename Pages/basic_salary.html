@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Salary!</title>
     <link rel="stylesheet" href="../Asset/CSS/basic_salary.css">
 </head>
-
 <body>
-    <form action="" id="basicForm" onsubmit="return handleCalculate()">
-        <h2>Basic Salary Calculator</h2>
-        <input type="text" name="basic_salary" id="basic_salary" placeholder="Please enter your basic salary"> <br><br>
 
+    <form action="" onsubmit="return handlebonus()" id="basicForm">
+        <h2>Bonus System</h2>
+        <input type="text" id="salary" placeholder="Enter Your salary">
+        <br><br>
+         
         <select name="gender" id="gender">
-            <option value="0">--Select--</option>
-            <option value="m">Male</option>
-            <option value="f">Female</option>
-        </select> <br><br>
+            <option value="0">--Gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br><br>
 
         <select name="experience" id="experience">
             <option value="0">--Experience--</option>
-            <option value="month">Monthly</option>
-            <option value="year">Yearly</option>
-        </select> <br><br>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+        <br><br>
 
-        <input type="text" id="expgred" placeholder="Enter experience year."> <br><br>
+        <input type="number" id="number" placeholder="Enter Your Experience Year">
+        <br><br>
 
-        <input type="submit">
+        <!-- <input type="submit" value="Calculate Bonus" id="button"> -->
+        <button type="submit">Submit</button>
+        <br><br>
 
-        <p>Your Basic Salary: <span id="basicsalary"></span></p>
-        <p>Your Bonus: <span id="bonus"></span></p>
-        <p>Your Final Salary: <span id="fn_sal"></span></p>
+        <span>Your Bonus is:</span>
+        <span id="ans"></span>
+        <br><br>
+
+        <span>Your Salary is :</span>
+        <span id="sala"></span>
+        <br><br>
+
+        <span>Your Total Salary is :</span>
+        <span id="total"></span>
     </form>
 
     <script src="../Asset/JS/basic_salary.js"></script>
+    
 </body>
-
 </html>

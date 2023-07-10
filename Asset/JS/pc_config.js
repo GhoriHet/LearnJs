@@ -1,5 +1,5 @@
 
-let PcType = (p,r,m,g) => {
+let PcType = (p, r, m, g) => {
 
     let type;
 
@@ -9,7 +9,7 @@ let PcType = (p,r,m,g) => {
         type = "professional";
     } else if (p === 18000 && r >= 6000 && m >= 10000 && g === 4500) {
         type = "gaming";
-    }else {
+    } else {
         type = "daily use";
     }
 
@@ -23,19 +23,12 @@ let CalculateCost = (processer, ram, memory, graphics) => {
     let mem = parseInt(document.getElementById("memory").value);
     let gra = parseInt(document.getElementById("graphics").value);
 
-    // console.log(pro);
-    // console.log(r);
-    // console.log(m);
-    // console.log(g);
+    let res = PcType(pro, ra, mem, gra)
 
-    let res = PcType(pro,ra,mem,gra)
-
-    // console.log(res);
-    
-    let total = pro + ra + mem + gra; 
+    let total = pro + ra + mem + gra;
 
     console.log(total);
-    
+
     document.getElementById("totalVal").innerHTML = total;
     document.getElementById("typeof").innerHTML = res;
 

@@ -54,11 +54,6 @@ button{
 	border-radius: 5px;
 	border: none;
 	color: #082032;
-	background-color: black;
+	background-color: white;
 	font-weight: bold;
-}
-
-p {
-    color: black;
-    margin-top: 20px;
 }
