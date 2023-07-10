@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url(../Image/nice-landscape-with-boat.jpg);
+    background: url("../Image/ssss.avif");
     background-position: center;
     background-size: cover;
     font-family: 'Nunito', sans-serif;
@@ -23,7 +23,7 @@ body {
 #container {
     position: absolute;
     left: 25px;
-    top: 75px;
+    top: 100px;
     width: 500px;
     height: 200px;
     display: flex;

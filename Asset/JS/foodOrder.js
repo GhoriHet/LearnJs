@@ -60,6 +60,8 @@ const handleSubmit = () => {
     let coup;
     if (codes === 'ABC123' || codes === 'XYX856' || codes === 'MNP987') {
         coup = total * 0.10
+    } else {
+        coup = 0;
     }
     let total1 = (foodVal + friVal + pepsiVal - coup)
 

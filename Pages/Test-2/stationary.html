@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationary Stock System!</title>
+</head>
+
+<body>
+
+    <h2>Stationary Stock: </h2>
+    <form action="" onsubmit="return handleStationary()">
+        <input type="text" name="pen" id="pen" placeholder="Pen"> <br><br>
+        <input type="text" name="book" id="book" placeholder="Book"> <br><br>
+        <input type="text" name="pencil" id="pencil" placeholder="Pencil"> <br><br>
+        <input type="text" name="eraser" id="eraser" placeholder="Eraser"> <br><br>
+        <input type="submit" value="Submit Stock">
+    </form>
+
+    <p>Pen Price Is: <span id="penRate"></span></p>
+    <p>Book Price Is: <span id="bookRate"></span></p>
+    <p>Pencil Price Is: <span id="pencilRate"></span></p>
+    <p>Eraser Price Is: <span id="eraserRate"></span></p>
+    <p>Stationary Total Price Is: <span id="StatRate"></span></p>
+
+    <hr>
+    <h2>Stationary Selling: </h2>
+
+    <form action="" onsubmit="return handleSelling()">
+        <input type="text" name="pen" id="pen1" placeholder="Pen"> <br><br>
+        <input type="text" name="book" id="book1" placeholder="Book"> <br><br>
+        <input type="text" name="pencil" id="pencil1" placeholder="Pencil"> <br><br>
+        <input type="text" name="eraser" id="eraser1" placeholder="Eraser"> <br><br>
+        <input type="submit" value="Submit Sell">
+    </form>
+
+    <p>Pen Stock: <span id="penOut"></span></p>
+    <p>Book Stock: <span id="bookOut"></span></p>
+    <p>Pencil Stock: <span id="pencilOut"></span></p>
+    <p>Eraser Stock: <span id="earserOut"></span></p>
+    <p>Sell Total: <span id="sellTOTAL"></span></p>
+    <p>Final Bill Is: <span id="Final_bill"></span></p>
+
+    <script src="stationary.js"></script>
+</body>
+
+</html>
