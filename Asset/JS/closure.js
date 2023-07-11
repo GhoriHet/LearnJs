@@ -69,37 +69,89 @@
 
 
 // Closure Solutions
-const counterOuter = () => { //2
-    let count = 0; // Outer Variable
+// const counterOuter = () => { //2
+//     let count = 0; // Outer Variable
 
-    let inc = function countInnerInc() { //4 //6 //8
-        count++;
-        console.log(count);
-    }
+//     let inc = function countInnerInc() { //4 //6 //8
+//         count++;
+//         console.log(count);
+//     }
 
-    let dec = function countInnerInc() { //4 //6 //8
-        count--;
-        console.log(count);
-    }
+//     let dec = function countInnerInc() { //4 //6 //8
+//         count--;
+//         console.log(count);
+//     }
 
-    return {increment: inc, decrement: dec};
-}
+//     return {increment: inc, decrement: dec};
+// }
+
+// // let res = counterOuter(); //1
+// // res(); //3
+// // res(); //5
+// // res(); //7
 
 // let res = counterOuter(); //1
-// res(); //3
-// res(); //5
-// res(); //7
+// res.increment();
+// res.increment();
 
-let res = counterOuter(); //1
-res.increment();
-res.increment();
-
-res.decrement();
-res.increment();
-res.increment();
-res.increment();
+// res.decrement();
+// res.increment();
+// res.increment();
+// res.increment();
 
 
-// let res1 = counterOuter();
-// res1(); // Ans = 1
-// res1(); // Ans = 2
+// // let res1 = counterOuter();
+// // res1(); // Ans = 1
+// // res1(); // Ans = 2
+
+
+
+// ***************************************************
+
+// const buyOrange = () => {
+//     let fruit = "oranges";
+
+//     const prepareJuice = () => {
+//         console.log("Let's Sqaush:" + fruit + " juice is ready");
+//     }
+//     return prepareJuice;
+// }
+
+// // const serveJuiceInGlass = buyOrange();
+
+// // serveJuiceInGlass();
+
+// let res = buyOrange();
+// console.log(res);
+// res();
+
+// ***************************************************
+
+// const garden = () => {
+//     var vegetables = ["Tomato", "Carrot", "Potato"];
+
+//     const plantVegetable = () => {
+//         console.log(vegetables + ' Has Been Planted In The Garden.');
+//     }
+//     return plantVegetable;
+// }
+// let res = garden();
+// res()
+
+
+// 2nd method
+
+// const garden = () => {
+//     let vegetables = [];
+
+//     const plantVegetable = (veggie) => {
+//         vegetables.push(veggie);
+//         console.log(veggie + ' Has Been Planted In The Garden.');
+//     }
+//     return plantVegetable;
+// }
+// let res = garden();
+// res('Tomato');
+// res('Potato');
+// res('Carrot')
+
