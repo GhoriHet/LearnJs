@@ -107,8 +107,35 @@ let arr = [10, 20, 30, 40, 'Het', 60, 70];
 
 // 5. Function In Fill.
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-// fill() fills specified elements in an array with a value.
-let answer = fruits.fill("Grapes")  // Fill all array elements with "Grapes":
-console.log(answer); // Answer: 'Grapes', 'Grapes', 'Grapes', 'Grapes'
+// // fill() fills specified elements in an array with a value.
+// let answer = fruits.fill("Grapes")  // Fill all array elements with "Grapes":
+// console.log(answer); // Answer: 'Grapes', 'Grapes', 'Grapes', 'Grapes'
+
+// *****************************************
+
+// Function In Filter.
+
+// let fData = arr.filter((v, i) => v > 18 && v < 70);
+// console.log(fData);
+
+// Function In Reduce.
+
+// let res = arr.reduce((acc, v, i) => acc + v , 0);
+// console.log(res);
+
+// Function In Join.
+
+// let res = arr.join("|")
+// console.log(res);
+
+// Function In Slice.
+
+// let res = arr.slice(1, 3);
+// console.log(res);
+
+// Function In Fill.
+
+let res = arr.fill("Okay", 2, 4)
+console.log(res);
