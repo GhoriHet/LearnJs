@@ -76,7 +76,7 @@ let arr = [10, 20, 30, 40, 'Het', 60, 70];
 
 // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-// const result = words.filter(word => word.length > 6);
+// const result = words.filter(word => word.length > 6); // Get every element in the array that has a value of 6 or more:
 
 // console.log(result); // answer : exuberant, dedestruction, present
 
