@@ -239,22 +239,22 @@
 // 23) Finding the index of the first occurrence of an element in an array.
 
 // let arr1 = [1, 2, 3, 4, 5, 6];
-// const chekFirt = (arr1) => {
-//     let ans = arr1.indexOf(5);
+// const chekFirt = (arr1, n) => {
+//     let ans = arr1.indexOf(n);
 //     console.log(ans);
 // }
-// chekFirt(arr1); // 4
+// chekFirt(arr1, 2); 
 
 
 
 // 24) Finding the index of the last occurrence of an element in an array.
 
 // let arr1 = [1, 2, 3, 4, 3, 5, 6];
-// const chekLast = (arr1) => {
-//     let ans = arr1.lastIndexOf(5);
+// const chekLast = (arr1, n) => {
+//     let ans = arr1.lastIndexOf(n);
 //     console.log(ans);
 // }
-// chekLast(arr1); //5
+// chekLast(arr1, 3);
 
 
 
@@ -270,7 +270,7 @@
 
 // let arr = [23, 5, 44, 76, 44, 65, 23, 44, 12, 45, 90, 44];
 // const replace = (arr, oldelm, newelm) => {
-//     let ans = arr.map((v) => v == oldelm ? newelm : v);
+//     let ans = arr.map((v) => v ==  oldelm ? newelm : v)
 //     console.log(ans);
 // }
 // replace(arr, 44, 88);
@@ -281,10 +281,8 @@
 
 // let arr1 = [11, 23, 22, 5, 89];
 // const revrese = (arr1) => {
-//     let temp = [...arr1];
-//     let ans = temp.reverse();
-//     console.log(arr1);
-//     console.log(ans);
+//     let ans = arr1.slice().reverse();
+//     console.log(arr1, ans);
 // }
 // revrese(arr1);
 
@@ -324,9 +322,7 @@
 
 // let arr = [5, 44, 76, 65, 23, 12, 90];
 // const maxsum = (arr) => {
-//     let ans = arr.sort((a, b) => b - a)
-//         .slice(0, 3)
-//         .reduce((acc, v) => acc + v, 0);
+//     let ans = arr.sort((a, b) => b - a).slice(0, 3).reduce((acc, v) => acc + v, 0);
 //     console.log(ans);
 // }
 // maxsum(arr);
