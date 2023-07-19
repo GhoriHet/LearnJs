@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
+    <link rel="stylesheet" href="../Asset/CSS/product_list.css">
 </head>
 <body>
-    <form action="" onsubmit="return handleSubmit()">
-        <input type="text" name="Product Add" id="proAdd" placeholder="Please Enter Product Name.">
-
-        <input type="submit" value="Submit">
-    </form>
-
+    <h2>Product List</h2>
+    <div class="list_block">
+        <form action="#" onsubmit="return handleSubmit()">
+            <div class="row">
+                <label>Product Name: </label>
+                <input type="text" name="productName" id="textValue">
+            </div>
+            <div class="row">
+                <label></label>
+                <input class="btn" type="submit">
+            </div>
+        </form>
+        <ul id="displayList"></ul>
+    </div>
     <script src="../Asset/JS/product_list.js"></script>
 </body>
 </html>
