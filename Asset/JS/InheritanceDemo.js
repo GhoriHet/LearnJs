@@ -1,31 +1,40 @@
-class Car {
-    modal;
-    brand;
-    color;
-    constructor(modal, brand, color) {
-        this.modal = modal;
-        this.brand = brand
-        this.color = color;
+//parent class
+
+class student {
+    id;
+    name;
+
+    constructor(id,name){
+        this.id = id;
+        this.name = name;
     }
 
-    car_details() {
-        console.log("Car Id :", this.modal);
-        console.log("Brand :", this.brand);
-        console.log("Color :", this.color);
+    basic_info(){
+        console.log('id: ' + this.id);
+        console.log('Name: ' + this.name);
+    }
+
+}
+
+//child class
+
+class course extends student{
+
+    course_name;
+
+    constructor(id , name, course_name){
+        super(id,name); //pass value to parent
+        this.course_name = course_name;
+
+    }
+
+    course_details(){
+        console.log('Id: ' + this.id);
+        console.log('Name: ' + this.name);
+        console.log('Course: ' + this. course_name);
     }
 }
 
-class CarInfo extends Car {
-    price;
-    constructor(modal, brand, color, price) {
-        super(modal, brand, color);
-        this.price = price;
-    }
-    car_info() {
-        this.car_details();
-        console.log("Price :" , this.price);
-    }
-}
-
-let car_res = new CarInfo('GlA 450', 'Mercedes', 'Black', 11000000);
-car_res.car_info();
+let c1 = new course (101,'Het','JavaScript');
+c1.course_details();
+// c1.basic_info();
