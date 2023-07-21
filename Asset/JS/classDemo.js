@@ -83,7 +83,7 @@ class Computer {
 
     constructor(type, company) {
         this.type = type;
-        this.company = company;
+        this.company = company; 
     }
 
     configraturation(processor, ram , storage) {
