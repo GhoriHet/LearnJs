@@ -1,40 +1,80 @@
-//parent class
+// class Student {
+//     id;
+//     name;
 
-class student {
+//     constructor(id, name) {
+//         this.id = id;
+//         this.name = name;
+//     }
+
+//     basic_Info() {
+//         console.log("Id : ", this.id);
+//         console.log("Name : ", this.name);
+//     }
+// }
+
+// class Course extends Student {
+//     course_name;
+//     duration;
+//     fees;
+
+//     constructor(id, name, course_name, duration, fees) {
+//         super(id, name);
+
+//         this.course_name = course_name;
+//         this.duration = duration;
+//         this.fees = fees;
+//     }
+
+//     cousre_Info() {
+//         this.basic_Info();
+//         console.log("Course Name : ", this.course_name);
+//         console.log("Course Duration : ", this.duration);
+//         console.log("Course Fees : ", this.fees);
+//     }
+// }
+
+// let c1 = new Course(101, "Het", "JavaScript (OOPs)", "12 Months", 625000);
+// c1.cousre_Info();
+
+
+// ************************************************************************************
+
+class Employee {
     id;
     name;
 
-    constructor(id,name){
+    constructor(id, name) {
         this.id = id;
         this.name = name;
     }
 
-    basic_info(){
-        console.log('id: ' + this.id);
-        console.log('Name: ' + this.name);
-    }
-
-}
-
-//child class
-
-class course extends student{
-
-    course_name;
-
-    constructor(id , name, course_name){
-        super(id,name); //pass value to parent
-        this.course_name = course_name;
-
-    }
-
-    course_details(){
-        console.log('Id: ' + this.id);
-        console.log('Name: ' + this.name);
-        console.log('Course: ' + this. course_name);
+    basic_Info() {
+        console.log("Id : ", this.id);
+        console.log("Name : ", this.name);
     }
 }
 
-let c1 = new course (101,'Het','JavaScript');
-c1.course_details();
-// c1.basic_info();
+class Professional extends Employee {
+    salary;
+    work;
+    bonus;
+
+    constructor(id, name, salary, work, bonus) {
+        super(id, name);
+
+        this.salary = salary;
+        this.work = work;
+        this.bonus = bonus;
+    }
+
+    professional_Info() {
+        this.basic_Info();
+        console.log("Salary : ", this.salary);
+        console.log("Work : ", this.work);
+        console.log("Bonus : ", this.salary * 0.10);
+    }
+}
+
+let e1 = new Professional(102, "Piyush", 45000, "Web Developer");
+e1.professional_Info()
