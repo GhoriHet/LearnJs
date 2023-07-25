@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DENTAL BOOK APPOINMENT</title>
+    <link rel="icon" type="image/x-icon" href="./Image/dental_app_book.png">
+    <link rel="stylesheet" href="./CSS/2-dental.css">
+</head>
+
+<body>
+
+    <h2>Clinic Appoiment Book</h2>
+    <div class="treatment_block">
+        <form>
+            <div class="row">
+                <Label>Treatments:</Label>
+                <select id="treatment" onchange="Treatments()">
+                    <option value="">-- Select Here --</option>
+                    <option value="TC">Teeth Cleanings</option>
+                    <option value="FL">Fillings</option>
+                    <option value="RCT">Root Canal Treatment</option>
+                    <option value="RC">RCT + Cover</option>
+                    <option value="BI">Braces/Invisalign</option>
+                </select>
+                <span></span>
+            </div>
+        </form>
+        <div id="treatmentDetailsBlock">
+            <table id="plan">
+                <tr>
+                    <th>Treatments</th>
+                    <th>Seating</th>
+                    <th>Costing</th>
+                </tr>
+                <tr>
+                    <td><span id="treatmentSelect"></span></td>
+                    <td><span id="seatingSelect"></span></td>
+                    <td><span id="costingSelect"></span></td>
+                </tr>
+            </table>
+            <div class="row">
+                <label>Appoiment Date: </label>
+                <input type="date" name="appoiment_data" id="aptDate">
+                <span></span>
+            </div>
+            <div class="row">
+                <label></label>
+                <button type="submit" id="bookApt" onclick="handleAptDate()">Book Appoiment</button>
+            </div>
+        </div>
+    </div>
+    <div class="treatment_block" id="treatmentsPlan">
+        <h3>Your Treatment schedule.</h3>
+        <table id="plan1">
+            <tr>
+                <th>Sr. No.</th>
+                <th>Date</th>
+                <th>Charge</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./JS/2-dental.js"></script>
+</body>
+
+</html>
