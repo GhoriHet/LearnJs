@@ -34,28 +34,32 @@ function Treatments() {
 
 const handleAptDate = () => {
     let getAptDate = document.getElementById('aptDate').value;
+
     document.getElementById('treatmentsPlan').style.display = 'block';
 
     let newAptDate = new Date(getAptDate);
     let perSeatCosting = Math.round(final_costing / final_seating);
 
-    let data = '<tr> <th> Sr No : </th> <th> Appoinment Date </th> <th> Charge </th> </tr>'
-    for (SrNo = 1; SrNo <= final_seating; SrNo++) {
-
-        if (SrNo === 1) {
+    for (srNo = 1; srNo <= final_seating; srNo++) {
+        if (srNo === 1) {
             newAptDate.setDate(newAptDate.getDate());
         } else {
             newAptDate.setDate(newAptDate.getDate() + 7);
         }
 
         let finalAptDate = newAptDate.toLocaleDateString();
-        //    console.log(finalAptDate);
-        data += '<tr>'
-        data += '<td>' + SrNo + '</td>'
-        data += '<td>' + finalAptDate + '</td>'
-        data += '<td>' + perSeatCosting + '/- </td>'
-        data += '</tr>'
+
+        document.querySelector('#treatmentsPlan tr:last-child').insertAdjacentHTML('afterend', ' \
+            <tr>\
+                <td><span>' + srNo + '</span></td>\
+                <td><span>' + finalAptDate + '</span></td>\
+                <td><span>' + perSeatCosting + '/- </span></td>\
+            </tr>'
+        );
     }
-    document.getElementById("plan1").innerHTML = data;
-    document.getElementById("plan1").style.display = 'block';
 }
+
+
+// querySelector = The querySelector() method returns the first element that matches a CSS selector.
+
+// The insertAdjacentHTML() method inserts HTML code into a specified position.
