@@ -4,6 +4,7 @@ let s3 = 4, c3 = 2500;
 let s4 = 6, c4 = 12000;
 let s5 = 12, c5 = 35000;
 let final_treatment, final_seating, final_costing;
+let allData = [];
 
 const handleTreatments = (treatments, seating, costing) => {
     document.getElementById('treatmentSelect').innerHTML = treatments;
@@ -46,7 +47,6 @@ const handleAptDate = () => {
         } else {
             newAptDate.setDate(newAptDate.getDate() + 7);
         }
-
         let finalAptDate = newAptDate.toLocaleDateString();
 
         document.querySelector('#treatmentsPlan tr:last-child').insertAdjacentHTML('afterend', ' \
@@ -54,11 +54,11 @@ const handleAptDate = () => {
                 <td><span>' + srNo + '</span></td>\
                 <td><span>' + finalAptDate + '</span></td>\
                 <td><span>' + perSeatCosting + '/- </span></td>\
-            </tr>'
+            </tr>' 
         );
     }
-}
 
+}
 
 // querySelector = The querySelector() method returns the first element that matches a CSS selector.
 
