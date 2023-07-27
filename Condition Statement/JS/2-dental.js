@@ -41,11 +41,11 @@ const handleRemove = (id) => {
     let index = allData.findIndex((v) => v.id === id);
     console.log(index);
 
-    allData.map((v) => v.id === id);
+    allData.map((v) => v.id);
+    // console.log("allllll", allData);
 
-    allData.splice(id, 1)
-    // console.log("aaaaaaaa", allData);
-
+    allData.splice(index, 1)   
+    // console.log("allllllvvvvvvvvv", allData);
     displayData();
 
 }

@@ -57,7 +57,7 @@ label {
 
 input,
 select,
-button {
+#bookApt {
     outline: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
@@ -84,7 +84,7 @@ select option:disabled {
     font-size: 0;
 }
 
-button {
+#bookApt {
     display: block;
     max-width: fit-content;
     text-transform: uppercase;
@@ -94,7 +94,13 @@ button {
     color: #d7f4fa;
     margin-top: 10px;
 }
-
+button {
+    font-size: 17px;
+    border:  none;
+    background-color: transparent;
+    width: 100%;
+    /* height: 40px; */
+}
 #treatmentDetailsBlock,
 #treatmentsPlan {
     display: none;
