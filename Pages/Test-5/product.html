@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List! (Test-5)</title>
+    <style>
+        #disp-box {
+            width: 200px;
+            height: 120px;
+            padding: 10px;
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return handleSubmit()">
+        <label for="">Product Name: </label>
+        <input type="text" name="product" id="product" placeholder="Enter Product Name.">
+        <br><br>
+
+        <label for="">Price: </label>
+        <input type="text" name="price" id="price" placeholder="Enter Price.">
+        <br><br>
+
+        <input type="submit">
+    </form>
+    <p>Display Data: <span  id="display-show"></span></p>
+
+
+    <script src="./product.js"></script>
+</body>
+</html>
