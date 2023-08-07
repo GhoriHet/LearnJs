@@ -1,72 +1,88 @@
-class Budget {
+class budget {
     constructor() {
-        this.budgetInput = document.querySelector("#budgetAmtData");
-        this.expenseName = document.querySelector("#expenseNameData");
-        this.expenseAmount = document.querySelector("#expenseAmtData");
+        this.budgetinput = document.querySelector("#budget-input");
+        this.expenseinput = document.querySelector("#expense-input");
+        this.amountinput = document.querySelector("#amount-input");
 
         this.budget = document.querySelector("#budget-amount");
-        this.balance = document.querySelector("#balance-amount");
+        this.blance = document.querySelector("#balance-amount");
+
+        this.blancelist = document.querySelector("#expense-list");
+        this.expensevalue = document.querySelector("#expense-value");
+
+        this.expedata = [];
     }
-    submitBudget() {
-        // console.log("submitBudget");
 
-        let budget = parseInt(this.budgetInput.value)
-        // console.log(budget);
-
+    submitbudget() {
+        let budget = parseInt(this.budgetinput.value);
+        console.log(budget);
         if (budget < 0) {
-            document.getElementById("budget-error").innerHTML = "*Please enter valid budget."
+            document.getElementById("budget-error").innerHTML = "Please enter valid budget";
         } else {
-            document.getElementById("budget-error").innerHTML = " "
-
-            this.budget.innerHTML = budget;
-
-            this.DisplayData();
+            document.getElementById("budget-error").innerHTML = '';
         }
- 
-        event.preventDefault();
-    }
-
-    submitExpense() {
-        // console.log("submitExpense");
-
-        if (this.expenseName.value === '') {
-            document.getElementById("exp-error").innerHTML = "*Please enter valid Expense Name."
-        } else {
-            document.getElementById("exp-error").innerHTML = " ";   
-        }
-
-        // console.log(this.expName);
-
-        if (this.expenseAmount.value < 0 || this.expenseAmount.value === '') {
-            document.getElementById("expAmt-error").innerHTML = "*Please enter valid Expense Amount."
-        } else {
-            document.getElementById("expAmt-error").innerHTML = " "
-        }
+        // console.log("submitbudget");
 
         event.preventDefault();
+
+        this.budget.innerHTML = budget;
+        this.handeldisplay();
     }
 
-    DisplayData() {
-        // console.log("jjjjjj");
+    submitexpense() {
+        // console.log("submitexpense");
+        let expense = this.expenseinput.value;
+        console.log(expense);
 
-        let budgetVal = parseInt(this.budget.textContent);
-        // console.log(budgetVal);
+        let expenseamount = parseInt(this.amountinput.value);
+        console.log(expenseamount);
 
-        let expenseVal = 0;
+        if (this.expenseinput.value === "") {
+            document.getElementById("expenseName-error").innerHTML = "Please enter valid expense Name.";
+        } else {
+            document.getElementById("expenseName-error").innerHTML = ''
 
-        let balanceVal = 0;
+            }
+      
 
-        balanceVal = budgetVal - expenseVal;
+        if (this.amountinput.value < 0 || this.amountinput.value === "") {
+            document.getElementById("expenseAmt-error").innerHTML = "Please enter valid budget.";
+        } else {
+            document.getElementById("expenseAmt-error").innerHTML = '';
+        }
+        event.preventDefault();
 
-        this.balance.innerHTML = balanceVal;
+        this.blancelist.innerHTML = expense;
+        this.expensevalue.innerHTML = expenseamount;
+        this.handeldisplay();
+    }
+
+    handeldisplay() {
+
+        // console.log(ffffffffff);
+
+        let bugetval = parseInt(this.budget.textContent);
+        let expenseval = 0;
+        console.log(bugetval);
+
+        let blanceval = 0;
+
+        blanceval = bugetval - expenseval;
+
+        this.blance.innerHTML = blanceval;
     }
 }
 
-let b = new Budget()
 
-document.getElementById("budgetCalcForm").addEventListener("submit", function() {
-    b.submitBudget()
+
+let b = new budget();
+
+let budgetform = document.getElementById("budget_form");
+budgetform.addEventListener("submit", function () {
+    b.submitbudget()
 });
-document.getElementById("addExpenseForm").addEventListener("submit", function() {
-    b.submitExpense()
+
+let expenseform = document.getElementById("expense_form");
+expenseform.addEventListener("submit", function () {
+    b.submitexpense()
 });

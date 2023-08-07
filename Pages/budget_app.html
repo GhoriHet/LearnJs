@@ -3,94 +3,107 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="../Asset/CSS/budget_app.css">
+    <style>
+        .error {
+            color: red;
+        }
+        #expense-btn {
+            background-color: white;
+            color: red;
+        }
+        #budget-btn {
+            background-color: white;
+            color: green;
+            border-color: green;
+        }
+    </style>
 </head>
 
 <body>
-    <section id="budgetApp">
-        <div class="container">
-            <h1>Budget App</h1>
-            <div class="row">
-                <div class="form_part">
-                    <form action="" autocomplete="off" method="post" id="budgetCalcForm">
-                        <div class="row">
-                            <label>Please enter your budget: </label>
-                            <input type="number" name="budget   Amount" id="budgetAmtData">            
-                            <span></span>
-                            <span id="budget-error" class="error"></span>
-                        </div>
-                        <div class="row">
-                            <button class="btn" type="submit" id="calcBtn">Calculate</button>
-                        </div>
-                        <span class="step">Step: 1</span>
-                    </form>
-                </div>
-                <div class="calc_part row">
-                    <div class="amt_block" id="budget">
-                        <h3>Budget</h3>
-                        <img src="../Asset/Image/23_budget.png" alt="Budget">
-                        <span id="exp-icon"> ₹ </span>
-                        <span id="budget-amount">0</span>
-                    </div>
-                    <div class="amt_block" id="expense">
-                        <h3>Expenses</h3>
-                        <img src="../Asset/Image/23_expenses.png" alt="Expenses">
-                        <span id="exp-icon"> ₹ </span>
-                        <span id="exp-amount">0</span>
-                    </div>
-                    <div class="amt_block" id="balance">
-                        <h3>Balance</h3>
-                        <img src="../Asset/Image/23_balance.png" alt="Balance">
-                        <span id="exp-icon"> ₹ </span>
-                        <span id="balance-amount">0</span>
-                    </div>
-                </div>
+
+    <div class="container">
+        <div class="row">
+            <h2>Budget App</h2> 
+            <br>
+            <div class="col-4 border border-success p-2">
+                <form action="" id="budget_form">
+                    <span>Please Enter Your Budget.</span><br>
+                    <span class="text-capitalize error pb-4 " id="budget-error"></span><br>
+                    <input type="text" class="form-control border-success mb-3" aria-label="Username" id="budget-input">
+                    <button type="submit" class="btn btn-success mt-2" id="budget-btn">Calculate</button>
+                </form>
             </div>
+
+            <div class="col-2 ps-5 text-center">
+                <h6 class="text-uppercase">BUDGET</h6>
+                <br>
+                <img src="../Asset/Image/23_budget.png" alt="img" class="w-50">
+                <br><br>
+                <h4 class="text-uppercase mt-2 fs-2 budget" id="budget" style="color: green"><span>$ </span><span
+                        id="budget-amount">0</span>
+                </h4>
+            </div>
+
+            <div class="col-2 ps-5 text-center">
+                <h6 class="text-uppercase">EXPENSES</h6>
+                <br>
+                <img src="../Asset/Image/23_expenses.png" alt="img" class="w-50">
+                <br><br>
+                <h4 class="text-uppercase mt-2 fs-2 budget" id="expenses" style="color: red"><span>$ </span><span
+                        id="expenses-amount">0</span>
+                </h4>
+            </div>
+
+            <div class="col-2 ps-5 text-center">
+                <h6 class="text-uppercase ">BALANCE</h6>
+                <br>
+                <img src="../Asset/Image/23_balance.png" alt="img" class="w-50">
+                <br><br>
+                <h4 class="text-uppercase mt-2 fs-2 budget" id="balance" style="color:black"><span>$ </span><span
+                        id="balance-amount">0</span>
+                </h4>
+            </div>
+        </div>
+        <br><br>
+
+    </div>
+
+        <div class="expense container">
             <div class="row">
-                <div class="form_part">
-                    <form action="" autocomplete="off" method="post" id="addExpenseForm">
-                        <div class="row">
-                            <label>Please enter your expense: </label>
-                            <input type="text" name="expenseName" id="expenseNameData">
-                            <span></span>
-                            <span id="exp-error" class="error"></span>
-                        </div>
-                        <div class="row">
-                            <label>Please enter your expense amount: </label>
-                            <input type="number" name="expenseAmount" id="expenseAmtData">
-                            <span></span>
-                            <span id="expAmt-error" class="error"></span>
-                        </div>
-                        <div class="row">
-                            <button class="btn" type="submit" id="expenseBtn">Add Expense</button>
-                        </div>
-                        <span class="step">Step: 2</span>
+                <div class="col-4 border border-danger p-2" id="expense">
+                    <form action="" id="expense_form">
+                        
+                        <span>Please Enter Your Expense.</span><br>
+                        <span class="text-capitalize error pb-4 " id="expenseName-error"></span><br>
+                        <input type="text" class="form-control border-danger mb-3" aria-label="Username" id="expense-input">
+                        <span>Please Enter Expense Amount.</span><br>
+                        <span class="text-capitalize error pb-4 " id="expenseAmt-error"></span><br>
+                        <input type="text" class="form-control border-danger mb-3" aria-label="Username" id="amount-input">
+                        <span class="text-capitalize error pb-4 " id="expense-amount"></span>
+                        <button type="submit" class="btn btn-success mt-2" style="border-color: red" , id="expense-btn">Add Expense</button>
                     </form>
                 </div>
-                <div class="calc_part" id="expenseTable">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Expense Name</th>
-                                <th>Expense Amount</th>
-                                <!-- <th>Action</th> -->
-                            </tr>
-                        </thead>
-                        <tbody id="expenseList"></tbody>
-                    </table>
+                <div class="col-2 ps-5 text-center">
+                    <h6 class="text-uppercase">Expense Name</h6>
+                    <h4 id="expense-list"></h4>
+                </div>
+
+                <div class="col-2 ps-5 text-center">
+                    <h6 class="text-uppercase">Expense Value</h6>
+                    <h4 id="expense-value"></h4>
                 </div>
             </div>
         </div>
-    </section>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script src="../Asset/JS/budget_app.js"></script>
 </body>
 
