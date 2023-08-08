@@ -95,6 +95,8 @@ class Budget {
         let dTxt = document.createTextNode("Delete")
         dEle.appendChild(dTxt)
 
+
+        
         dEle.addEventListener("click", () => this.hendalremove(id))
 
         p3.appendChild(dEle)
@@ -114,6 +116,8 @@ class Budget {
         this.expenseValue.innerHTML = expenseVal;
 
     }
+
+
 
      hendalremove = (rednum) => {
         console.log(rednum);
