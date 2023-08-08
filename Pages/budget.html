@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/budget.css"> -->
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Budget App</title>
+</head>
+<style>
+    .error {
+        color: red;
+    }
+    .expense_list {
+        padding: 0 0 0 40px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Budget App</h1>
+        <div class="main_box1 row" style="margin-top: 30px;">
+            <div class="box1 col-6 ">
+                <form action="#" method="post" id="budgetFrom" class="border border-success border border-2 rounded-3"
+                    style="width: 550px; height: 250px; padding: 20px;">
+                    <h5>Please Enter Your Budget</h5>
+                    <input type="text" name="budgetdata" id="budgetdata"
+                        style="width: 500px; height: 45px; border-radius: 5px;"><span id="error1"
+                        class="error"></span><br><br>
+                    <button id="btw"
+                        style="width: 130px; height: 40px; border-radius: 5px; margin-top: 20px; font-weight: bold;">Calculate</button>
+                </form>
+            </div>
+            <div class="box2 col-6">
+                <div class="data row text-center">
+                    <div class="budget col-4"
+                        style="display:flex; color: darkgreen; flex-direction: column; height: 250px; justify-content: space-between;">
+                        <h4>BUDGET</h4>
+                        <i class="fas fa-money-bill-alt" style="font-size: 45px;"></i>
+                        <div class="dollar">
+                            <i class="fa-sharp fa-light fa-dollar-sign" style="font-size: 33px;"></i>
+                            <span id="budgetValue" style="font-size: 45px;">0</span>
+                        </div>
+                    </div>
+                    <div class="expense col-4"
+                        style="display:flex; color: darkred; flex-direction: column; height: 250px; justify-content: space-between;">
+                        <h4>EXPENSES</h4>
+                        <i class="fa-regular fa-credit-card" style="font-size: 45px;"></i>
+                        <div class="dollar">
+                            <i class="fa-sharp fa-light fa-dollar-sign" style="font-size: 33px;"></i>
+                            <span id="expenseValue" style="font-size: 50px;">0</span>
+                        </div>
+                    </div>
+                    <div class="balance col-4"
+                        style="display:flex; flex-direction: column; height: 250px; justify-content: space-between;">
+                        <h4>BALANCE</h4>
+                        <i class="fa-solid fa-dollar-sign" style="font-size: 45px;"></i>
+                        <div class="dollar">
+                            <i class="fa-sharp fa-light fa-dollar-sign" style="font-size: 33px;"></i>
+                            <span id="balanceValue" style="font-size: 50px;">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main_box2 row" style="margin-top: 90px;">
+            <div class="box3 col-6">
+                <form action="#" method="post" id="expenseForm" class="border border-danger border border-2 rounded-3"
+                    style="width: 550px; height: 370px; padding: 20px;">
+                    <p>Please Enter Your Expense</p>
+                    <input type="text" name="ExpeData" id="ExpeData"
+                        style="width: 500px; height: 45px; border-radius: 5px;"> <span id="error2" class="error"></span>
+                    <br><br>
+                    <p>Please Enter Expense Amount</p>
+                    <input type="text" name="ExpeValue" id="ExpeValue"
+                        style="width: 500px; height: 45px; border-radius: 5px;"> <span id="error3" class="error"></span>
+                    <br><br>
+
+                    <button
+                        style="width: 130px; height: 40px; border-radius: 5px; margin-top: 20px; font-weight: bold;">Add
+                        Expense</button>
+                </form>
+            </div>
+            <div class="box4 col-5">
+                <!-- <table border="2px" id="listExp">
+                    <thead>
+                        <th>Expense Name</th>
+                        <th>Expense Cost</th>
+                        <th>Action</th>
+                    </thead>    
+                    <tbody id="expenseList"> 
+        
+                    </tbody>
+                </table> -->
+
+                <div id="expense_list" class="expense_list">
+                    <div class="ps-5 d-flex justify-content-between text-center">
+                       <h5 class="list-item">Expense Name</h5>
+                       <h5 class="list-item">Expense Value</h5>
+                       <h5 class="list-item">Action</h5>
+                    </div>
+                    <div class="ps-5 d-flex justify-content-between text-center">
+                        <p class="list-item"></p>
+                        <p class="list-item"></p>
+                        <p class="list-item"></p>
+                    </div>
+                    <div class="ps-5 d-flex justify-content-between text-center">
+                        <p class="list-item"></p>
+                        <p class="list-item"></p>
+                        <p class="list-item"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Asset/JS/budget.js"></script>
+</body>
+
+</html>
