@@ -1,44 +1,54 @@
 function handleSubmit() {
-    // // console.log("aaaaaa");
-    let a = document.getElementById("duration").value;
-    let b = parseFloat(document.getElementById("value").value);
-    let c = document.getElementById("convert").value;
+    let selectBox = document.getElementById("duration").value;
+    let inputValue = parseFloat(document.getElementById("value").value);
+    let convertValue = document.getElementById("convert").value;
 
     let result;
+    let valueE = true;
 
-    switch (a) {
-        case 'km':
-            if (c == 'km') {
-                result = b;
-            } else if (c == 'cm') {
-                result = b * 100000;
-            } else if (c == 'm') {
-                result = b * 1000;
-            }
-            break;
-
-        case 'm':
-            if (c == 'm') {
-                result = b;
-            } else if (c == 'cm') {
-                result = b * 100;
-            } else if (c == 'km') {
-                result = b * 0.001;
-            }
-            break;
-
-        case 'cm':
-            if (c == 'cm') {
-                result = b;
-            } else if (c == 'm') {
-                result = b * 0.01;
-            } else if (c == 'km') {
-                result = b * 0.00001;
-            }
-            break;
+    if (!inputValue || inputValue <= 0) {
+        document.getElementById("valueErr").innerHTML = "*Please enter value";
+    }else {
+        document.getElementById("valueErr").innerHTML = "";
+        valueE = false ;
     }
 
-    // console.log(result);
-    document.getElementById("total_ans").innerHTML = result;
-    return false;
+    if (valueE) {
+        return false
+    } else {
+        switch (selectBox) {
+            case 'km':
+                if (convertValue == 'km') {
+                    result = inputValue;
+                } else if (convertValue == 'cm') {
+                    result = inputValue * 100000;
+                } else if (convertValue == 'm') {
+                    result = inputValue * 1000;
+                }
+                break;
+    
+            case 'm':
+                if (convertValue == 'm') {
+                    result = inputValue;
+                } else if (convertValue == 'cm') {
+                    result = inputValue * 100;
+                } else if (convertValue == 'km') {
+                    result = inputValue * 0.001;
+                }
+                break;
+    
+            case 'cm':
+                if (convertValue == 'cm') {
+                    result = inputValue;
+                } else if (convertValue == 'm') {
+                    result = inputValue * 0.01;
+                } else if (convertValue == 'km') {
+                    result = inputValue * 0.00001;
+                }
+                break;
+        }
+        document.getElementById("total_ans").innerHTML = result;
+        return false
+    }
+    
 }
